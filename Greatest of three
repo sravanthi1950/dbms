@@ -1,0 +1,31 @@
+SET SERVEROUTPUT ON;
+DECLARE
+num1 NUMBER := 10;
+num2 NUMBER := 20;
+num3 NUMBER := 15;
+greatest NUMBER;
+BEGIN
+IF num1 >= num2 AND num1 >= num3 THEN
+greatest := num1;
+ELSIF num2 >= num1 AND num2 >= num3 THEN
+greatest := num2;
+ELSE
+greatest := num3;
+END IF;
+DBMS_OUTPUT.PUT_LINE('The greatest number among ' || num1 || ', ' || num2 || ', and ' || num3 || ' is: ' 
+|| greatest);
+END;
+/
+
+
+In this PL/SQL block:
+ The variables num1, num2, and num3 are initialized with values 10, 20, and 15 respectively.
+ The IF statement checks three conditions: if num1 is greater than or equal to num2 and num3, if 
+num2 is greater than or equal to num1 and num3, and if neither of the previous conditions are true (i.e., 
+num3 is the greatest).
+ Depending on the condition met, the greatest number is assigned to the variable greatest.
+ Finally, the result is printed using DBMS_OUTPUT.PUT_LINE.
+
+
+Sample Output:
+The greatest number among 10, 20, and 15 is: 20
