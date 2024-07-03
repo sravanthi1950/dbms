@@ -1,0 +1,17 @@
+DECLARE
+v_salary NUMBER := -1000;
+BEGIN
+IF v_salary < 0 THEN
+RAISE VALUE_ERROR;
+ELSE
+DBMS_OUTPUT.PUT_LINE('Salary: ' || v_salary);
+END IF;
+EXCEPTION
+WHEN VALUE_ERROR THEN
+DBMS_OUTPUT.PUT_LINE('Error: Invalid salary value');
+END;
+/
+
+
+Sample Output (Invalid salary value):
+Error: Invalid salary value
