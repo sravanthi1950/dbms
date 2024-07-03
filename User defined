@@ -1,0 +1,19 @@
+DECLARE
+v_age NUMBER := 15;
+v_min_age CONSTANT NUMBER := 18;
+BEGIN
+IF v_age < v_min_age THEN
+RAISE_APPLICATION_ERROR(-20001, 'Age must be at least 18');
+ELSE
+DBMS_OUTPUT.PUT_LINE('You are eligible');
+END IF;
+EXCEPTION
+Date: Page | 22 _ _ _ _ _ _ _ _ _ _ _
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+END;
+/
+
+
+Sample Output (Age validation):
+Error: Age must be at least 18
