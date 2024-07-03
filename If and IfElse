@@ -1,0 +1,32 @@
+SET SERVEROUTPUT ON;
+DECLARE
+num1 NUMBER := 10;
+num2 NUMBER := 20;
+BEGIN
+-- IF condition
+IF num1 > num2 THEN
+DBMS_OUTPUT.PUT_LINE(num1 || ' is greater than ' || num2);
+END IF;
+-- IF-ELSE condition
+IF num1 < num2 THEN
+DBMS_OUTPUT.PUT_LINE(num1 || ' is less than ' || num2);
+ELSE
+DBMS_OUTPUT.PUT_LINE(num1 || ' is not less than ' || num2);
+END IF;
+END;
+/
+
+
+
+In this PL/SQL block:
+ The variables num1 and num2 are declared and initialized with values 10 and 20 respectively.
+ The first IF condition checks if num1 is greater than num2. If true, it prints a message indicating 
+that.
+ The second IF-ELSE condition checks if num1 is less than num2. If true, it prints a message 
+indicating that. If false, it prints a message indicating that num1 is not less than num2.
+
+
+
+Sample Output:
+10 is less than 20
+10 is not less than 20
