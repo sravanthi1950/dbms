@@ -1,0 +1,20 @@
+
+SET SERVEROUTPUT ON;
+DECLARE
+num1 NUMBER := 10;
+num2 NUMBER := 20;
+sum NUMBER;
+BEGIN
+sum := num1 + num2;
+DBMS_OUTPUT.PUT_LINE('The sum of ' || num1 || ' and ' || num2 || ' is: ' || sum);
+END;
+/
+
+
+This PL/SQL block declares two variables num1 and num2 initialized with the values 10 and 20 
+respectively. It then calculates the sum of num1 and num2 and stores it in the sum variable. Finally, it 
+uses the DBMS_OUTPUT.PUT_LINE procedure to display the result.
+
+
+Sample Output:
+The sum of 10 and 20 is: 30
